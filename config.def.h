@@ -1,5 +1,4 @@
 /* See LICENSE file for copyright and license details. */
-#include <X11/XF86keysym.h>
 
 /*
  * appearance
@@ -150,7 +149,7 @@ static const char *colorname[] = {
 	"#add8e6", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
 	"gray78", /* 258 -> bg */
-	"black", /* 259 -> fg */
+	"#1C1C1C", /* 259 -> fg */
 };
 
 
@@ -170,7 +169,7 @@ static unsigned int defaultrcs = 257;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 4;
+static unsigned int cursorshape = 6;
 
 /*
  * Default columns and rows numbers
@@ -228,8 +227,8 @@ static Shortcut shortcuts[] = {
  	{ MODSHIFT,             XK_L,           zoom,           {.f = -1} },
   	{ MODKEY,               XK_j,           kscrolldown,    {.i =  1} },
 	{ MODKEY,               XK_k,           kscrollup,    	{.i =  1} },
-  	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+  	{ MODKEY,             XK_i,           kscrollup,      {.i = -1} },
+	{ MODKEY,               XK_u,           kscrolldown,    {.i = -1} },
  	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
  	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
