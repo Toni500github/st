@@ -1,0 +1,23 @@
+commit 11fc446aef2a9dbb99845e4b0294ef6177dbb3cb
+Author: GasparVardanyan <gaspar.vardanyan.mailbox@gmail.com>
+Date:   Fri Feb 11 20:15:19 2022 +0400
+
+    modify newterm to work with tabbed
+
+diff --git a/st.c b/st.c
+index f03f5bd..c0a6716 100644
+--- a/st.c
++++ b/st.c
+@@ -1071,7 +1071,11 @@ newterm(const Arg* a)
+ 		break;
+ 	case 0:
+ 		chdir(getcwd_by_pid(pid));
+-		execlp("st", "./st", NULL);
++		char * tabbed_win = getenv ("XEMBED");
++		if (tabbed_win)
++			execlp("st", "./st", "-w", tabbed_win, NULL);
++		else
++			execlp("st", "./st", NULL);
+ 		break;
+ 	}
+ }
