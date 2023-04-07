@@ -94,7 +94,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.7;
 
 /* Terminal colors (16 first used in escape sequence) */
 /*static const char *colorname[] = {
@@ -175,8 +175,8 @@ static unsigned int cursorshape = 6;
  * Default columns and rows numbers
  */
 
-static unsigned int cols = 80;
-static unsigned int rows = 24;
+static unsigned int cols = 180;
+static unsigned int rows = 71;
 
 /*
  * Default colour and shape of the mouse cursor
