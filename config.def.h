@@ -233,6 +233,7 @@ static Shortcut shortcuts[] = {
  	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 	{ MODKEY,               XK_l,           copyurl,        {.i =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
+	{ MODKEY, 		XK_v, 		opencopied, 	{.v = "xdg-open"} },
  	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
  	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
   	{ MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
