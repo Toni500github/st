@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "DejaVu Sans Mono for Powerline:pixelsize=11:antialias=true:autohint=true"; //"Liberation Mono:pixelsize=12:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -28,6 +28,10 @@ char *vtiden = "\033[?6c";
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 1.0;
 static float chscale = 1.0;
+
+/* Character rendering offsets in pixels */
+static short cxoffset = 0;
+static short cyoffset = 0;
 
 /*
  * word delimiter string
@@ -228,8 +232,8 @@ static Shortcut shortcuts[] = {
   	{ MODKEY,               XK_j,           kscrolldown,    {.i =  1} },
 	{ MODKEY,               XK_k,           kscrollup,    	{.i =  1} },
 	{ TERMMOD,              XK_T,      	newterm,        {.i =  0} },
-  	{ MODKEY,             	XK_i,           kscrollup,      {.i = -1} },
-	{ MODKEY,               XK_u,           kscrolldown,    {.i = -1} },
+  	{ MODKEY,             	XK_Up,          kscrollup,      {.i = -1} },
+	{ MODKEY,               XK_Down,        kscrolldown,    {.i = -1} },
  	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 	{ MODKEY,               XK_l,           copyurl,        {.i =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
