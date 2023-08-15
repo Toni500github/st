@@ -83,8 +83,8 @@ static unsigned int cursorthickness = 2;
  *    Bold affects lines thickness if boxdraw_bold is not 0. Italic is ignored.
  * 0: disable (render all U25XX glyphs normally from the font).
  */
-const int boxdraw = 0;
-const int boxdraw_bold = 0;
+const int boxdraw = 1;
+const int boxdraw_bold = 1;
 
 /* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
 const int boxdraw_braille = 0;
@@ -156,21 +156,21 @@ static const char *colorname[] = {
 	"#d79921",
 	"#458588",
 	"#b16286",
-	"#689d6a",
+	"#00cdcd",
 	"#a89984",
-	"#928374",
+	"#5c5347",
 	"#fb4934",
 	"#5AED6C",
 	"#fabd2f",
 	"#83a598",
 	"#d3869b",
-	"#8ec07c",
+	"#00ffff",
 	"#819bd4",
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#add8e6", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
-	"gray78", /* 258 -> bg */
+	"gray70", /* 258 -> bg */
 	"#1C1C1C", /* 259 -> fg */
 };
 
@@ -227,6 +227,10 @@ static uint forcemousemod = ShiftMask;
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
+	{ XK_ANY_MOD,           Button4, kscrollup,      {.i = 1}, 	0, /* !alt */ -1 },
+        { XK_ANY_MOD,           Button5, kscrolldown,    {.i = 1},	0, /* !alt */ -1 },
+	{ Mod1Mask,           	Button4, kscrollup,      {.i = -1},     0, /* !alt */ -1 },
+        { Mod1Mask,           	Button5, kscrolldown,    {.i = -1},     0, /* !alt */ -1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
 	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },

@@ -37,7 +37,7 @@ extern char *argv0;
 #define ESC_ARG_SIZ   16
 #define STR_BUF_SIZ   ESC_BUF_SIZ
 #define STR_ARG_SIZ   ESC_ARG_SIZ
-#define HISTSIZE      2000
+#define HISTSIZE      5000
 #define RESIZEBUFFER  1000
 
 /* macros */
@@ -1057,6 +1057,11 @@ ttywriteraw(const char *s, size_t n)
 
 write_error:
 	die("write error on tty: %s\n", strerror(errno));
+}
+
+int tisaltscr(void)
+{
+	return IS_SET(MODE_ALTSCREEN);
 }
 
 void
