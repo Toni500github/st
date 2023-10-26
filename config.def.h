@@ -7,10 +7,12 @@
  */
 static char *font = /*"DejaVu Sans Mono for Powerline:pixelsize=11:antialias=true:autohint=true";*/ "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
 static char *font2[] = {
-	"Awesome 5 Free Regular:style=Regular",
+	//"Awesome 5 Free Regular:style=Regular",
 	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true",
-	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true",
+	//"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true",
+	"JetBrainsMono Nerd Font :pixelsize=12:antialias=true:autohint=true"
 };
+
 static int borderpx = 2;
 
 /*
@@ -155,30 +157,28 @@ float alpha = 0.9;
 };*/
 
 static const char *colorname[] = {
-	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#cc241d",
-	"#42FF5A",
-	"#d79921",
-	"#458588",
-	"#b16286",
-	"#00cdcd",
-	"#a89984",
-	"#5c5347",
-	"#fb4934",
-	"#5AED6C",
-	"#fabd2f",
-	"#83a598",
-	"#d3869b",
-	"#00ffff",
-	"#819bd4",
-	[255] = 0,
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#add8e6", /* 256 -> cursor */
-	"#555555", /* 257 -> rev cursor*/
-	"gray70", /* 258 -> bg */
-	"#1C1C1C", /* 259 -> fg */
+    "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+    "#cc241d",
+    "#42FF5A",
+    "#d79921",
+    "#458588",
+    "#b16286",
+    "#00cdcd",
+    "#E8E3E3",
+    "#5c5347",
+    "#fb4934",
+    "#5AED6C",
+    "#fabd2f",
+    "#83a598",
+    "#d3869b",
+    "#00ffff",
+    "#E8EAE3", [255] = 0,
+    /* more colors can be added after 255 to use with DefaultXX */
+    "#add8e6", /* 256 -> cursor */
+    "#555555", /* 257 -> rev cursor*/
+    "gray70",  /* 258 -> bg */
+    "#1C1C1C", /* 259 -> fg */
 };
-
 
 /*
  * Default colors (colorname index)
