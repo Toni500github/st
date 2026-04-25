@@ -10,7 +10,7 @@ static char *font2[] = {
 	//"Awesome 5 Free Regular:style=Regular",
 	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true",
 	//"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true",
-	"JetBrainsMono Nerd Font :pixelsize=12:antialias=true:autohint=true"
+	"JetBrainsMono Nerd Font:pixelsize=12:antialias=true:autohint=true"
 };
 
 static int borderpx = 2;
